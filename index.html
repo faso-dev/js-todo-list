@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des tâches</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<div class="container-md mt-5">
+    <h1 class="text-center text-primary mt-5">
+        Gestion des tâches
+    </h1>
+    <div class="container-md mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <input
+                        placeholder="Entrez le nom de votre tâche"
+                        class="form-control"
+                        type="text"
+                        name="tache"
+                        id="champ_text">
+            </div>
+            <div class="col-lg-12 mt-2">
+                <button disabled id="ajouter_tache" class="text-center btn btn-primary float-right">
+                    <i class="fa fa-plus"></i> Ajouter une tâche
+                </button>
+            </div>
+        </div>
+        <hr class="mt-5">
+        <div class="row mt-5">
+            <div class="col-lg-10 border-right">
+                <div id="taches_container">
+                    <h1 class="text-center">
+                        Liste des tâches
+                    </h1>
+                    <ul id="list" class="list-group list-group-flush d-none"></ul>
+                    <div id="pas_de_taches" class="alert alert-info" style="margin-top: 80px;">
+                        <p class="text-center">
+                            Vous n'avez pas de tâche encore
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="row">
+                    <div class="col">
+                        <button id="supprimer_dernier" class="mt-2 btn btn-warning text-white">
+                            <i class="fa fa-minus"></i> Supprimer
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="supprimer_tous" class="mt-2 btn btn-danger text-white">
+                            <i class="fa fa-trash"></i> Vider
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/fonts/js/all.min.js"></script>
+<script src="./src/tache.js"></script>
+</body>
+</html>
